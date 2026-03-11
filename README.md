@@ -1,16 +1,65 @@
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a personal portfolio website built with **React**, **Vite**, **TypeScript**, and **Tailwind CSS**. It showcases my projects, blogs, and a brief about me.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** with React Router v7 for client‑side routing.
+- **Vite** for fast development and optimized builds.
+- **Tailwind CSS** (v4) for utility‑first styling.
+- **FontSource Inter** for clean typography.
+- **Lucide React** icons.
+- **Markdown** rendering for blog posts.
+- **Animations** using `motion`.
+- **Responsive** layout with a minimal design.
 
-## React Compiler
+## Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+src/
+├─ components/      # Reusable UI components (Layout, Nav, etc.)
+├─ pages/           # Page components (Home, ProjectDetails, Blogs, …)
+├─ App.tsx          # Root component with routing
+├─ main.tsx         # Application entry point
+├─ index.css        # Tailwind base styles
+└─ ...
+```
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview the production build
+npm run preview
+```
+
+## Scripts
+
+- `dev` – Starts Vite in development mode with hot‑module replacement.
+- `build` – Generates an optimized production build.
+- `preview` – Serves the production build locally.
+- `lint` – Runs ESLint across the codebase.
+
+## Linting & Formatting
+
+ESLint is configured with the recommended rules for React and hooks. Run:
+
+```bash
+npm run lint
+```
+
+## Contributing
+
+Feel free to open issues or submit pull requests if you find bugs or have suggestions.
+
+## License
+
+This project is private and intended for personal use.
