@@ -2,25 +2,26 @@ import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { motion } from "motion/react";
-import { PROJECTS } from "../data/projects";
 import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
+import "highlight.js/styles/github-dark.css";
+import { blogs } from "../data/blogs";
 
-const ProjectDetails = () => {
-  const { id } = useParams<{ id: string }>();
-  const project = id ? PROJECTS.find((p) => p.id === parseInt(id)) : undefined;
+const BlogPost = () => {
+  const { slug } = useParams<{ slug: string }>();
+  const blog = slug ? blogs.find((b) => b.slug === slug) : undefined;
 
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  if (!project) {
+  if (!blog) {
     return (
       <div className="min-h-[50vh] flex flex-col items-center justify-center text-neutral-500">
-        <p>Project not found.</p>
-        <Link to="/" className="text-white mt-4 underline">
-          Go Home
+        <p>Blog post not found.</p>
+        <Link to="/blogs" className="text-white mt-4 underline">
+          Back to Blogs
         </Link>
       </div>
     );
@@ -35,24 +36,25 @@ const ProjectDetails = () => {
       className="mt-12"
     >
       <Link
-        to="/"
+        to="/blogs"
         className="inline-flex items-center gap-2 text-neutral-500 hover:text-white transition-colors mb-8 group"
       >
         <ArrowLeft
           size={16}
           className="group-hover:-translate-x-1 transition-transform"
         />
-        <span className="text-sm">Back to projects</span>
+        <span className="text-sm">Back to all blogs</span>
       </Link>
 
       <article className="mb-12">
         <header className="mb-10">
-          <title>{project.title}</title>
+          <title>{blog.title}</title>
+          <span className="text-xs text-neutral-500">{blog.date}</span>
         </header>
 
         <div className="prose prose-invert prose-neutral max-w-none prose-sm sm:prose-base prose-p:text-neutral-400 prose-headings:text-neutral-200 prose-a:text-white prose-code:text-neutral-300 prose-pre:bg-neutral-900 prose-pre:border prose-pre:border-neutral-800">
           <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
-            {project.content}
+            {blog.content}
           </ReactMarkdown>
         </div>
       </article>
@@ -60,4 +62,4 @@ const ProjectDetails = () => {
   );
 };
 
-export default ProjectDetails;
+export default BlogPost;

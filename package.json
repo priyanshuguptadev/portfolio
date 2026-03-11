@@ -11,12 +11,15 @@
   },
   "dependencies": {
     "@fontsource/inter": "^5.2.8",
+    "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.18",
     "lucide-react": "^0.563.0",
     "motion": "^12.29.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-markdown": "^10.1.0",
     "react-router-dom": "^7.13.0",
+    "rehype-highlight": "^7.0.2",
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
