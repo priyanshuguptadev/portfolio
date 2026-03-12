@@ -28,6 +28,8 @@ OpenSlop is a terminal-based coding agent designed to assist developers in writi
 OpenSlop is a powerful coding agent that provides developers with a terminal-based interface to assist them in writing code efficiently. With its open-source nature and vendor-agnostic design, it offers flexibility and customization options for developers. The use of modern technologies ensures that OpenSlop is both efficient and user-friendly, making it a valuable tool for developers looking to enhance their coding experience.
 
 ### Relevant Links:
+- [Blog: How OpenSlop Works?](/blogs/how-openslop-works)
+- [Youtube Video: OpenSlop in Action](https://www.youtube.com/watch?v=nXCdTM92pA0)
 - [GitHub Repository](https://github.com/priyanshuguptadev/openslop)
 - [Live Demo](https://openslop.priyanshugupta.space/)
 - [Documentation](https://docs.openslop.priyanshugupta.space)
