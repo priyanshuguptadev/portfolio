@@ -12,6 +12,7 @@ This is a personal portfolio website built with **React**, **Vite**, **TypeScrip
 - **Markdown** rendering for blog posts.
 - **Animations** using `motion`.
 - **Responsive** layout with a minimal design.
+- **Google Analytics** integration via a custom `AnalyticsTracker` component that sends page view events to `gtag`.
 
 ## Project Structure
 
@@ -19,7 +20,8 @@ This is a personal portfolio website built with **React**, **Vite**, **TypeScrip
 src/
 ├─ components/      # Reusable UI components (Layout, Nav, etc.)
 ├─ pages/           # Page components (Home, ProjectDetails, Blogs, …)
-├─ App.tsx          # Root component with routing
+├─ utils/           # Utility functions (e.g., trackPage)
+├─ App.tsx          # Root component with routing and analytics
 ├─ main.tsx         # Application entry point
 ├─ index.css        # Tailwind base styles
 └─ ...
