@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import { motion } from "motion/react";
+import { AnimatedPage } from "../components/AnimatedPage";
 import { PROJECTS } from "../data/projects";
 import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
@@ -27,13 +27,7 @@ const ProjectDetails = () => {
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-      className="mt-12"
-    >
+    <AnimatedPage className="mt-12">
       <Link
         to="/"
         className="inline-flex items-center gap-2 text-neutral-500 hover:text-white transition-colors mb-8 group"
@@ -56,7 +50,7 @@ const ProjectDetails = () => {
           </ReactMarkdown>
         </div>
       </article>
-    </motion.div>
+    </AnimatedPage>
   );
 };
 

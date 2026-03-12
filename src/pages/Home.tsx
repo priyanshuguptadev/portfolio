@@ -1,17 +1,13 @@
-import { motion } from "motion/react";
+import { AnimatedPage } from "../components/AnimatedPage";
 import Hero from "../components/Hero";
 import ProjectSection from "../components/ProjectSection";
 
 const Home = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+    <AnimatedPage>
       <Hero />
       <ProjectSection />
-    </motion.div>
+    </AnimatedPage>
   );
 };
 

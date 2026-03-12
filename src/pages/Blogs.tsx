@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { motion } from "motion/react";
+import { AnimatedPage } from "../components/AnimatedPage";
 import { Link } from "react-router-dom";
 import { blogs } from "../data/blogs";
 
@@ -10,13 +10,7 @@ const Blogs = () => {
   }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-      className="w-full mt-12"
-    >
+    <AnimatedPage className="w-full mt-12">
       <div className="flex flex-col gap-10">
         {blogs.map((blog) => (
           <Link
@@ -33,7 +27,7 @@ const Blogs = () => {
           </Link>
         ))}
       </div>
-    </motion.div>
+    </AnimatedPage>
   );
 };
 
