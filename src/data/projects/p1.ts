@@ -16,9 +16,10 @@ A live attendance system built using Express and WS (WebSockets) in pure TypeScr
 - Express
 - WebSockets (WS)
 - Docker
-- CI/CD tools (e.g., GitHub Actions)
+- GitHub Actions for CI/CD
 - AWS for hosting and deployment
-- Nginx for reverse proxy and load balancing
+- Nginx for reverse proxy
 
-Source Code: [https://github.com/priyanshuguptadev/realtime-attendence-system](https://github.com/priyanshuguptadev/realtime-attendence-system)
+### Relevant Links:
+- [GitHub Repository](https://github.com/priyanshuguptadev/realtime-attendence-system)
 `;
