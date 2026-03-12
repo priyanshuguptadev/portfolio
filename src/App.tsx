@@ -5,6 +5,7 @@ import ProjectDetails from "./pages/ProjectDetails";
 import Blogs from "./pages/Blogs";
 import BlogPost from "./pages/BlogPost";
 import { NotFound } from "./pages/NotFound";
+import AnalyticsTracker from "./components/AnalyticsTracker";
 
 // Wrapper to access location for AnimatePresence if we wanted page transitions
 // For now, simple routing
@@ -32,6 +33,7 @@ function App() {
   return (
     <BrowserRouter>
       <AppContent />
+      <AnalyticsTracker />
     </BrowserRouter>
   );
 }

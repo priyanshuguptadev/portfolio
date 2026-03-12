@@ -1,7 +1,16 @@
 import React from "react";
 import { Github, Linkedin, MessageCircle, FileText } from "lucide-react";
+import window from "../utils/window";
 
 const Hero: React.FC = () => {
+  const handleResumeClick = () => {
+    if (typeof window !== "undefined") {
+      window.gtag?.("event", "resume_click", {
+        event_category: "engagement",
+        event_label: "Resume Download",
+      });
+    }
+  };
   return (
     <section className="flex flex-col-reverse md:flex-row items-center md:items-start justify-between gap-8 mb-20 pt-10">
       <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
@@ -31,7 +40,10 @@ const Hero: React.FC = () => {
             <MessageCircle strokeWidth={1.5} size={18} />
           </a>
           <a
-            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={handleResumeClick}
+            href="https://drive.google.com/file/d/1Ew42NU7TsaF8YR8dIqIhZDWoF5Cccj0h/view"
             className="flex items-center gap-2 text-neutral-500 hover:text-white transition-colors duration-300 group"
           >
             <FileText
