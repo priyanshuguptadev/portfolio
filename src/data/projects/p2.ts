@@ -25,7 +25,7 @@ The Codeforces Contests Bot is a Telegram bot designed to notify users about upc
 The Codeforces Contests Bot is a useful tool for competitive programmers who want to stay updated on upcoming contests without having to manually check the Codeforces website. It provides a convenient way to receive notifications and manage subscriptions, ensuring that users never miss an important contest announcement.
 
 ### Relevant Links:
-- [GitHub Repository](https://github.com/priyanshuguptadev/codeforces-contests-bot)
-- [Telegram Bot](https://t.me/cf_contests_bot)
+- [GitHub Repository](https://github.com/priyanshuguptadev/telegram-bot)
+- [Telegram Bot](https://t.me/cfcontests_bot)
 
 `;
